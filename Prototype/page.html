@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="An independent prototype for preparing a digital payment fraud or dispute complaint in India.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Saathi Payment Desk | Digital Payment Case Builder</title>
+  <style>/*__CSS__*/</style>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="m12 3 7 3v5c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 4.7 4.7"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.5 2a13 13 0 0 0 6.5 6.5l2-2.5 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5c0-1 1-2 2-2Z"/></symbol>
+    <symbol id="icon-document" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5Z"/><path d="M14 3v5h5M8 12h8m-8 4h8"/></symbol>
+    <symbol id="icon-legal" viewBox="0 0 24 24"><path d="M12 3v17m-5 1h10M4 7h16M6 7l-3 7h6L6 7Zm12 0-3 7h6l-3-7Z"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M4 4h7a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4V4Zm10 3a3 3 0 0 1 3-3h3v15h-2a4 4 0 0 0-4 2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v11h14V9m-9 11v-6h4v6"/></symbol>
+    <symbol id="icon-sample" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m10 8 6 4-6 4Z"/></symbol>
+  </svg>
+  <div class="portal-top">
+    <div class="tricolor" aria-hidden="true"><span></span><span></span><span></span></div>
+    <header class="bar">
+      <div class="wrap bar-inner">
+        <a class="brand" href="#home" aria-label="Saathi Payment Desk home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg></span><span class="brand-name"><strong>Saathi Payment Desk</strong><small>India digital payment support</small></span></a>
+        <div class="utility" aria-label="Accessibility and session controls">
+          <a class="skip" href="#main">Skip to main content</a>
+          <div class="text-tools" role="group" aria-label="Text size"><button type="button" data-text-size="small" aria-label="Smaller text" aria-pressed="false">A−</button><button type="button" data-text-size="normal" aria-label="Default text" aria-pressed="true">A</button><button type="button" data-text-size="large" aria-label="Larger text" aria-pressed="false">A+</button></div>
+          <button class="contrast" type="button" id="contrast" aria-label="High contrast" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+          <button class="clear" type="button" id="clear">Clear session</button>
+          <button class="nav-toggle" type="button" id="nav-toggle" aria-controls="portal-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#icon-menu"/></svg> Menu</button>
+        </div>
+      </div>
+    </header>
+    <div class="urgent-strip"><div class="wrap"><span><strong>Suspect money was stolen?</strong> Contact your bank and report promptly.</span><a href="tel:1930"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Call 1930</a></div></div>
+  </div>
+
+  <nav class="portal-nav" id="portal-nav" aria-label="Portal navigation">
+    <p class="nav-label" aria-hidden="true">Explore the desk</p>
+    <ul>
+      <li><a href="#home" aria-current="location"><svg class="icon" aria-hidden="true"><use href="#icon-home"/></svg> Home</a></li>
+      <li><a href="#services"><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg> Start a case</a></li>
+      <li><a href="#desk"><svg class="icon" aria-hidden="true"><use href="#icon-document"/></svg> Case builder</a></li>
+      <li><a href="#demo-cases"><svg class="icon" aria-hidden="true"><use href="#icon-sample"/></svg> Demo cases</a></li>
+      <li><a href="#library"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg> Fraud library</a></li>
+      <li><a href="#payment-resources"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Reporting contacts</a></li>
+      <li><a href="#resources"><svg class="icon" aria-hidden="true"><use href="#icon-legal"/></svg> Official sources</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="home" tabindex="-1" aria-labelledby="page-title">
+      <div class="wrap hero-inner">
+        <span class="demo-label">Independent assignment demo</span>
+        <div class="hero-mark" aria-hidden="true"><svg class="icon"><use href="#icon-shield"/></svg></div>
+        <h1 id="page-title">Saathi Payment Desk</h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p>Make sense of a digital payment fraud or dispute and prepare what to send.</p>
+        <form class="search" id="service-search" role="search" aria-label="Search fraud types" autocomplete="off">
+          <div class="search-fields">
+            <label class="search-input"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><input type="search" id="search-query" placeholder="Search UPI, KYC, trading, or other fraud types" aria-label="Search for a fraud type" maxlength="120" autocomplete="off"></label>
+            <select id="search-category" aria-label="Fraud category"><option value="all">All categories</option><option value="payment">Payment scams</option><option value="account">Account or card</option><option value="impersonation">Impersonation</option></select>
+          </div>
+          <button class="search-button" type="submit">Search</button>
+        </form>
+        <div class="quick-links"><span>Quick links</span><button type="button" data-route="tricked" aria-pressed="false">Tricked into paying</button><button type="button" data-route="debit" aria-pressed="false">Unrecognized debit</button><a href="#library">Explore fraud types</a></div>
+      </div>
+    </section>
+
+    <div class="wrap portal-content">
+      <section class="helplines" id="payment-resources" tabindex="-1" aria-label="Payment fraud resources">
+        <a class="helpline" href="tel:1930"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg><span><strong>1930</strong><small>Financial cyber fraud helpline</small></span></a>
+        <a class="helpline" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-document"/></svg><span><strong>Cybercrime</strong><small>Official reporting portal</small></span></a>
+        <a class="helpline" href="#library"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg><span><strong>15 types</strong><small>Fraud pattern library</small></span></a>
+        <a class="helpline" href="https://cms.rbi.org.in/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-legal"/></svg><span><strong>RBI CMS</strong><small>Eligible provider complaints</small></span></a>
+      </section>
+
+      <section class="search-results" id="search-results" aria-labelledby="results-title" hidden><h2 id="results-title" tabindex="-1">Search results</h2><p id="results-status" role="status"></p><div id="results-list" class="results-list"></div></section>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Help paths and fictional examples">
+          <div class="service-panel" id="services" tabindex="-1"><span class="section-label">Digital payment support</span><h2>Start your case</h2><div id="primary-paths" class="path-list"></div></div>
+          <div class="example-panel"><h2>Other payment issues</h2><div id="other-paths" class="examples"></div></div>
+          <div class="example-panel" id="demo-cases" tabindex="-1"><h2>Try a fictional case</h2><div id="examples" class="examples"></div></div>
+        </aside>
+        <section class="desk" id="desk" tabindex="-1" aria-labelledby="desk-title">
+          <div class="desk-header"><div class="desk-heading"><span class="desk-avatar" aria-hidden="true"><svg class="icon"><use href="#icon-document"/></svg></span><div><h2 id="desk-title">Payment case builder</h2><p id="desk-sub">Choose what happened or open a fictional case.</p></div></div><span class="local-badge"><span></span> On device</span></div>
+          <div id="view" class="view"></div>
+          <div class="desk-footer">Use fictional or redacted details. Your entries stay in this tab until you clear or close it.</div>
+        </section>
+      </div>
+
+      <section class="library" id="library" tabindex="-1" aria-labelledby="library-title"><span class="section-label">Learn the patterns</span><h2 id="library-title">Digital payment fraud library</h2><p>Browse 15 patterns and see which records may help explain what happened.</p><div class="library-grid" id="library-list"></div></section>
+    </div>
+  </main>
+
+  <footer id="resources" tabindex="-1"><div class="wrap footer-inner"><div><strong>Saathi Payment Desk</strong><p>Independent assignment prototype for India.</p></div><details><summary><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg> Official sources</summary><ul id="sources"></ul></details></div></footer>
+  <script>/*__ENGINE__*/</script>
+  <script>/*__UI__*/</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+{
+  "fictional": true,
+  "classifications": [
+    {
+      "story": "Scanned a QR code for a refund and my UPI app debited me",
+      "expected": "qr",
+      "suggested": [
+        "qr"
+      ]
+    },
+    {
+      "story": "Telegram job asked for a deposit to unlock paid rating tasks",
+      "expected": "tasks",
+      "suggested": [
+        "tasks"
+      ]
+    },
+    {
+      "story": "SIM band ho gaya aur bank se paise kat gaye",
+      "expected": "sim",
+      "suggested": [
+        "sim"
+      ]
+    },
+    {
+      "story": "The trading app showed stock profits and refused my withdrawal",
+      "expected": "invest",
+      "suggested": [
+        "invest"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "input": {
+        "id": "qr-refund",
+        "title": "Fake refund QR",
+        "route": "tricked",
+        "category": "qr",
+        "story": "A caller pretending to offer a refund sent a QR code. I scanned it, entered my UPI PIN to receive the refund, and my account was debited.",
+        "facts": {
+          "amount": "4800",
+          "channel": "upi",
+          "paidAt": "2026-11-05T10:20",
+          "noticedAt": "2026-11-05T10:21",
+          "provider": "Demo payment app"
+        }
+      },
+      "output": {
+        "timeline": [
+          {
+            "label": "Payment or debit",
+            "when": "2026-11-05 10:20",
+            "detail": "₹4800 via UPI"
+          },
+          {
+            "label": "Issue noticed",
+            "when": "2026-11-05 10:21",
+            "detail": "A caller pretending to offer a refund sent a QR code. I scanned it, entered my UPI PIN to receive the refund, and my account was debited."
+          }
+        ],
+        "evidence": [
+          {
+            "id": "record",
+            "text": "Payment receipt or statement entry with amount, date, and transaction reference."
+          },
+          {
+            "id": "messages",
+            "text": "Relevant messages, call times, screenshots, or merchant correspondence."
+          },
+          {
+            "id": "specific",
+            "text": "Original QR or payment request and the message that told you to approve it."
+          },
+          {
+            "id": "complaint",
+            "text": "Bank or payment provider acknowledgement and any written response."
+          }
+        ],
+        "drafts": {
+          "bank": "Subject: Suspected scam-induced payment\n\nI made or approved the payment and believe I was misled.\nWhat happened: A caller pretending to offer a refund sent a QR code. I scanned it, entered my UPI PIN to receive the refund, and my account was debited.\nAmount: ₹4800\nPayment method: UPI\nTransaction date and time: 2026-11-05 10:20\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-05 10:21\nBank, app, or provider: Demo payment app\n\nPlease investigate, advise what steps I should take to secure my account, and tell me which dispute or recovery options apply. Please provide a complaint reference and a written response.",
+          "cyber": "Subject: Suspected scam-induced payment\n\nI made or approved the payment and believe I was misled.\nWhat happened: A caller pretending to offer a refund sent a QR code. I scanned it, entered my UPI PIN to receive the refund, and my account was debited.\nAmount: ₹4800\nPayment method: UPI\nTransaction date and time: 2026-11-05 10:20\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-05 10:21\nBank, app, or provider: Demo payment app\n\nI can supply the records I have through the official reporting channel. Please advise the next steps and provide an acknowledgement.",
+          "escalation": null
+        },
+        "mayEscalate": false
+      }
+    },
+    {
+      "input": {
+        "id": "card-debit",
+        "title": "Unrecognized card charge",
+        "route": "debit",
+        "category": "card",
+        "story": "An online purchase appeared on my credit card statement. I did not make or approve it.",
+        "facts": {
+          "amount": "3200",
+          "channel": "card",
+          "paidAt": "2026-11-05T08:20",
+          "noticedAt": "2026-11-05T09:00",
+          "provider": "Demo card issuer"
+        }
+      },
+      "output": {
+        "timeline": [
+          {
+            "label": "Payment or debit",
+            "when": "2026-11-05 08:20",
+            "detail": "₹3200 via Card / ATM"
+          },
+          {
+            "label": "Issue noticed",
+            "when": "2026-11-05 09:00",
+            "detail": "An online purchase appeared on my credit card statement. I did not make or approve it."
+          }
+        ],
+        "evidence": [
+          {
+            "id": "record",
+            "text": "Payment receipt or statement entry with amount, date, and transaction reference."
+          },
+          {
+            "id": "messages",
+            "text": "Relevant messages, call times, screenshots, or merchant correspondence."
+          },
+          {
+            "id": "specific",
+            "text": "Card statement, merchant descriptor or ATM location, and card issuer complaint reference."
+          },
+          {
+            "id": "complaint",
+            "text": "Bank or payment provider acknowledgement and any written response."
+          }
+        ],
+        "drafts": {
+          "bank": "Subject: Unrecognized debit\n\nI do not recognize making or approving the debit.\nWhat happened: An online purchase appeared on my credit card statement. I did not make or approve it.\nAmount: ₹3200\nPayment method: Card / ATM\nTransaction date and time: 2026-11-05 08:20\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-05 09:00\nBank, app, or provider: Demo card issuer\n\nPlease investigate, advise what steps I should take to secure my account, and tell me which dispute or recovery options apply. Please provide a complaint reference and a written response.",
+          "cyber": "Subject: Unrecognized debit\n\nI do not recognize making or approving the debit.\nWhat happened: An online purchase appeared on my credit card statement. I did not make or approve it.\nAmount: ₹3200\nPayment method: Card / ATM\nTransaction date and time: 2026-11-05 08:20\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-05 09:00\nBank, app, or provider: Demo card issuer\n\nI can supply the records I have through the official reporting channel. Please advise the next steps and provide an acknowledgement.",
+          "escalation": null
+        },
+        "mayEscalate": false
+      }
+    },
+    {
+      "input": {
+        "id": "trading",
+        "title": "Fake trading app",
+        "route": "tricked",
+        "category": "invest",
+        "story": "A trading group asked me to deposit money into a platform. It displayed profits but refused my withdrawal and demanded a further fee.",
+        "facts": {
+          "amount": "25000",
+          "channel": "transfer",
+          "paidAt": "2026-10-21T15:40",
+          "noticedAt": "2026-10-29T11:15",
+          "provider": "Demo Bank"
+        },
+        "report": {
+          "status": "rejected",
+          "date": "2026-10-30"
+        }
+      },
+      "output": {
+        "timeline": [
+          {
+            "label": "Payment or debit",
+            "when": "2026-10-21 15:40",
+            "detail": "₹25000 via Bank transfer"
+          },
+          {
+            "label": "Issue noticed",
+            "when": "2026-10-29 11:15",
+            "detail": "A trading group asked me to deposit money into a platform. It displayed profits but refused my withdrawal and demanded a further fee."
+          },
+          {
+            "label": "Provider complaint",
+            "when": "2026-10-30",
+            "detail": "Reply received, issue unresolved"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "record",
+            "text": "Payment receipt or statement entry with amount, date, and transaction reference."
+          },
+          {
+            "id": "messages",
+            "text": "Relevant messages, call times, screenshots, or merchant correspondence."
+          },
+          {
+            "id": "specific",
+            "text": "Platform name and URL, deposit records, and messages about withdrawal or additional fees."
+          },
+          {
+            "id": "complaint",
+            "text": "Bank or payment provider acknowledgement and any written response."
+          }
+        ],
+        "drafts": {
+          "bank": "Subject: Suspected scam-induced payment\n\nI made or approved the payment and believe I was misled.\nWhat happened: A trading group asked me to deposit money into a platform. It displayed profits but refused my withdrawal and demanded a further fee.\nAmount: ₹25000\nPayment method: Bank transfer\nTransaction date and time: 2026-10-21 15:40\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-10-29 11:15\nBank, app, or provider: Demo Bank\nPrior provider complaint: Reply received, issue unresolved. Date: 2026-10-30.\n\nPlease investigate, advise what steps I should take to secure my account, and tell me which dispute or recovery options apply. Please provide a complaint reference and a written response.",
+          "cyber": "Subject: Suspected scam-induced payment\n\nI made or approved the payment and believe I was misled.\nWhat happened: A trading group asked me to deposit money into a platform. It displayed profits but refused my withdrawal and demanded a further fee.\nAmount: ₹25000\nPayment method: Bank transfer\nTransaction date and time: 2026-10-21 15:40\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-10-29 11:15\nBank, app, or provider: Demo Bank\nPrior provider complaint: Reply received, issue unresolved. Date: 2026-10-30.\n\nI can supply the records I have through the official reporting channel. Please advise the next steps and provide an acknowledgement.",
+          "escalation": "Subject: Complaint about handling of suspected scam-induced payment\n\nI made or approved the payment and believe I was misled.\nWhat happened: A trading group asked me to deposit money into a platform. It displayed profits but refused my withdrawal and demanded a further fee.\nAmount: ₹25000\nPayment method: Bank transfer\nTransaction date and time: 2026-10-21 15:40\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-10-29 11:15\nBank, app, or provider: Demo Bank\nPrior provider complaint: Reply received, issue unresolved. Date: 2026-10-30.\n\nProvider complaint reference: [Add reference]\nWhat remains unresolved: [Describe the service issue and the reply, if any]\nRelief requested: [State what you are asking the provider to do]\n\nI can provide my prior written complaint and the provider’s response, if any."
+        },
+        "mayEscalate": true
+      }
+    },
+    {
+      "input": {
+        "id": "unclear",
+        "title": "An alert I can’t explain",
+        "route": "unsure",
+        "story": "I got a debit notification, but I have not confirmed the entry in my bank app. I am unsure if the alert is genuine.",
+        "facts": {
+          "channel": "other",
+          "noticedAt": "2026-11-06T12:00"
+        }
+      },
+      "output": {
+        "timeline": [
+          {
+            "label": "Payment or debit",
+            "when": "Unknown",
+            "detail": "Unknown via Other / unknown"
+          },
+          {
+            "label": "Issue noticed",
+            "when": "2026-11-06 12:00",
+            "detail": "I got a debit notification, but I have not confirmed the entry in my bank app. I am unsure if the alert is genuine."
+          }
+        ],
+        "evidence": [
+          {
+            "id": "record",
+            "text": "Payment receipt or statement entry with amount, date, and transaction reference."
+          },
+          {
+            "id": "messages",
+            "text": "Relevant messages, call times, screenshots, or merchant correspondence."
+          },
+          {
+            "id": "complaint",
+            "text": "Bank or payment provider acknowledgement and any written response."
+          }
+        ],
+        "drafts": {
+          "bank": "Subject: Request to review a payment\n\nI am unsure how this transaction occurred or whether it was approved.\nWhat happened: I got a debit notification, but I have not confirmed the entry in my bank app. I am unsure if the alert is genuine.\nAmount: Unknown\nPayment method: Other / unknown\nTransaction date and time: Unknown\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-06 12:00\n\nPlease investigate, advise what steps I should take to secure my account, and tell me which dispute or recovery options apply. Please provide a complaint reference and a written response.",
+          "cyber": "Subject: Request to review a payment\n\nI am unsure how this transaction occurred or whether it was approved.\nWhat happened: I got a debit notification, but I have not confirmed the entry in my bank app. I am unsure if the alert is genuine.\nAmount: Unknown\nPayment method: Other / unknown\nTransaction date and time: Unknown\nTransaction reference: [Add it directly in the official channel]\nNoticed on: 2026-11-06 12:00\n\nI can supply the records I have through the official reporting channel. Please advise the next steps and provide an acknowledgement.",
+          "escalation": null
+        },
+        "mayEscalate": false
+      }
+    },
+    {
+      "input": {
+        "id": "failed",
+        "title": "Failed UPI payment",
+        "route": "failed",
+        "story": "I tried to pay a store through UPI. My account was debited but the app shows failed and the store says it was not credited.",
+        "facts": {
+          "amount": "850",
+          "channel": "upi",
+          "paidAt": "2026-11-06T12:45"
+        }
+      },
+      "output": {
+        "timeline": [
+          {
+            "label": "Payment or debit",
+            "when": "2026-11-06 12:45",
+            "detail": "₹850 via UPI"
+          },
+          {
+            "label": "Issue noticed",
+            "when": "Unknown",
+            "detail": "I tried to pay a store through UPI. My account was debited but the app shows failed and the store says it was not credited."
+          }
+        ],
+        "evidence": [
+          {
+            "id": "record",
+            "text": "Payment receipt or statement entry with amount, date, and transaction reference."
+          },
+          {
+            "id": "messages",
+            "text": "Relevant messages, call times, screenshots, or merchant correspondence."
+          },
+          {
+            "id": "complaint",
+            "text": "Bank or payment provider acknowledgement and any written response."
+          }
+        ],
+        "drafts": {
+          "bank": "Subject: Failed or pending payment\n\nThe payment appears failed or pending. Please confirm its status.\nWhat happened: I tried to pay a store through UPI. My account was debited but the app shows failed and the store says it was not credited.\nAmount: ₹850\nPayment method: UPI\nTransaction date and time: 2026-11-06 12:45\nTransaction reference: [Add it directly in the official channel]\nNoticed on: Unknown\n\nPlease check the transaction and explain the applicable dispute or reversal process. Please provide a complaint reference and a written response.",
+          "cyber": null,
+          "escalation": null
+        },
+        "mayEscalate": false
+      }
+    }
+  ]
+}
