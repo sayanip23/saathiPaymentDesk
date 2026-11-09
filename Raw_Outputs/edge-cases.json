@@ -1,0 +1,29 @@
+{
+  "fictional": true,
+  "results": [
+    {
+      "input": {
+        "id": "implicit-qr",
+        "story": "The person asked me to point the camera at a square box to get my money back. The balance went down.",
+        "reviewerExpectation": "Include qr as a possible mechanism."
+      },
+      "output": {
+        "suggested": [
+          "refund"
+        ]
+      }
+    },
+    {
+      "input": {
+        "id": "ambiguous-alert",
+        "story": "I cannot tell whether this notification is real.",
+        "reviewerExpectation": "Abstain and ask what the notification says."
+      },
+      "output": {
+        "suggested": [
+          "prize"
+        ]
+      }
+    }
+  ]
+}
